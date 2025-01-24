@@ -16,9 +16,6 @@ const Navbar = async () => {
 
     const user = await getUser()
 
-    if(!user){
-        return 
-    }
 
 
     return (
