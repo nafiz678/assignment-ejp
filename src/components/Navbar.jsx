@@ -17,7 +17,6 @@ const Navbar = async () => {
     const user = await getUser()
 
 
-
     return (
         <div className='md:px-20 px-4 py-10'>
             <div className='flex items-center justify-between gap-2'>
