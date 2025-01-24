@@ -3,18 +3,12 @@ import { redirect } from 'next/navigation';
 
 
 const Profile = async () => {
-    const { isAuthenticated, getUser } = getKindeServerSession()
-
-    if (!(await isAuthenticated())) {
-        redirect('/api/auth/login')
-    }
+    const { getUser } = getKindeServerSession()
 
     const user = await getUser()
 
     if(!user){
-        return (
-            <h1 className='text-5xl'>Please login first</h1>
-        )
+        return redirect('/api/auth/login')
     }
 
 
