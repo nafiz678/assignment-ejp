@@ -5,7 +5,6 @@ const Profile = async () => {
     const { getUser } = getKindeServerSession()
 
     const user = await getUser()
-    console.log(user)
 
     return (
         <div className='flex items-center justify-center md:my-20 my-10 px-6'>

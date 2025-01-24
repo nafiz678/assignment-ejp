@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { Button } from './ui/button';
 import { IoMenuOutline } from "react-icons/io5";
-import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
+import { getKindeServerSession, LoginLink, LogoutLink } from '@kinde-oss/kinde-auth-nextjs/server';
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -34,12 +34,12 @@ const Navbar = async () => {
                         {user
                             ?
                             <li>
-                                <Link href="/api/auth/logout"><Button variant="outline" size="lg" className="rounded-xl underline-offset-4 hover:underline">Logout</Button></Link>
+                                <LogoutLink ><Button variant="outline" size="lg" className="rounded-xl underline-offset-4 hover:underline">Logout</Button></LogoutLink>
                             </li>
                             :
 
                             <li>
-                                <Link href="/api/auth/login"><Button variant="outline" size="lg" className="rounded-xl underline-offset-4 hover:underline">Login</Button></Link>
+                                <LoginLink ><Button variant="outline" size="lg" className="rounded-xl underline-offset-4 hover:underline">Login</Button></LoginLink>
                             </li>
                         }
                     </ul>
@@ -60,9 +60,9 @@ const Navbar = async () => {
                             <DropdownMenuItem>
                                 {user
                                     ?
-                                    <Link href="/api/auth/logout">Logout</Link>
+                                    <LogoutLink >Logout</LogoutLink>
                                     :
-                                    <Link href="/api/auth/login">Login</Link>
+                                    <LoginLink >Login</LoginLink>
                                 }
                             </DropdownMenuItem>
                         </DropdownMenuContent>
