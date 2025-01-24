@@ -20,8 +20,8 @@ const BlogDetails = async ({ params }) => {
                         &larr; Go Back
                     </button>
                 </Link>
-                <h1 className="text-3xl font-bold  mb-4 capitalize ">{specificBlog.title}</h1>
-                <p className="text-gray-400 leading-relaxed">Description: {specificBlog.body}</p>
+                <h1 className="text-3xl font-bold  mb-4 capitalize ">{specificBlog?.title}</h1>
+                <p className="text-gray-400 leading-relaxed">Description: {specificBlog?.body}</p>
             </div>
         </div>
     );
