@@ -9,7 +9,7 @@ const BlogDetails = async ({ params }) => {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
     const specificBlog = await res.json();
 
-    console.log(specificBlog)
+    
     return (
         <div className="my-20 flex flex-col items-center justify-center p-6">
             <div className="w-full text-start max-w-3xl rounded-xl bg-[#111] shadow-lg shadow-[#2c2c2c] p-6">
