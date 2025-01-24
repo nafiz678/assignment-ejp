@@ -8,7 +8,7 @@ async function BlogList() {
 
   return (
     <div className="min-h-screen  flex flex-col items-center py-8">
-      <h1 className="md:text-4xl text-3xl font-bold mb-6">Blogs to List</h1>
+      <h1 className="md:text-4xl text-3xl font-bold mb-6">Blogs List</h1>
       <ol className="w-3/4 list-decimal shadow-md rounded-lg p-4">
         {blogs.map((blog) => (
           <li key={blog.id} className="border-b hover:scale-110 transition-all ease-in-out duration-300 hover:shadow-lg shadow-white last:border-b-0 py-3 lg:hover:translate-x-10">
